@@ -1,5 +1,132 @@
-/* 
-
-write your code here
-
-*/
+/* task1 */
+@media print {
+  section.tm-content-box,
+  .carousel,
+  .blocks,
+  .tm-sidebar,
+  ul.gallery-container {
+    display: none;
+    height: 0;
+  }
+  .tm-main-content .tm-banner {
+    border: none;
+  }
+  .tm-team-description-container .tm-section-title {
+    color: blue;
+  }
+  section::before {
+    display: none;
+  }
+  img {
+    width: 20rem;
+  }
+}
+/* align first block */
+.flex-2-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+/* task 2 */
+li.box-bg:hover,
+h2.tm-box-bg-title:hover {
+  color: #f5f5f5;
+  background-color: lightskyblue;
+}
+/* task 3 */
+p::first-letter {
+  font-size: 30px;
+  color: #87cefa;
+  /* line-height: 32px; */
+}
+/* task 4 */
+section,
+.tm-content-header,
+.tm-sidebar,
+.blocks {
+  box-shadow: 0 0 4px 2px grey;
+}
+.tm-banner {
+  padding: 0;
+  border: 30px solid #f5f5f5;
+}
+/* task 5*/
+section::before {
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 35px 250px 0 0;
+  border-color: lightskyblue transparent transparent transparent;
+}
+/* task 6 */
+.carousel-inner h2 {
+  letter-spacing: 5px;
+  color: gainsboro;
+}
+/* task 7 */
+h2 + p {
+  font-style: italic;
+}
+/* task 8 */
+.tm-section-description {
+  line-height: 32px;
+  text-indent: 1.5em;
+}
+/* task 9 */
+ol li a {
+  color: black;
+}
+ol li a:visited {
+  border-bottom: 1px solid black;
+}
+ol li a:hover {
+  color: lightskyblue;
+  border-bottom: 1px double lightskyblue;
+}
+.text::after {
+  content: "New";
+  vertical-align: top;
+  font-size: 75%;
+  color: red;
+}
+/* task 10 */
+li.box-work {
+  padding: 7px;
+  margin-bottom: 3px;
+  background-color: #ffffff;
+}
+li.box-work:nth-child(2n) {
+  background-color: #f5f5f5;
+}
+.box-work p {
+  color: #666;
+}
+.box-work p::first-letter {
+  color: #666;
+}
+/* task 11 */
+.mandatory-field::after {
+  content: "*";
+  font-weight: bold;
+  color: red;
+}
+.contact-form {
+  text-align: right;
+}
+.submit-btn {
+  padding: 15px 40px;
+  color: lightskyblue;
+  background-color: #fff;
+  border: 1px solid lightskyblue;
+  border-radius: 0;
+}
+.submit-btn:hover {
+  color: #f5f5f5;
+  background-color: lightskyblue;
+  border-color: lightskyblue;
+}
+/* task 12 */
+.tm-nav-item-link:hover {
+  background-color: #f5f5f5;
+}
