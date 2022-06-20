@@ -1,0 +1,225 @@
+//for screen 1920px
+
+%border {
+  border: none;
+  border-radius: 5px;
+}
+$font-weight: (
+    "normal": 400,
+    "bold": 700,
+  );
+  @mixin button {
+  font-family: $font-3;
+  font-size: 1.3rem;
+  background-color: $btn-bg;
+  width: 150px;
+  color: $font-col-3;
+  border: none;
+  border-radius: 3px;
+  padding: 10px 30px;
+}
+@mixin link($font-link-col: $font-col-3) {
+  color: $font-link-col;
+  text-decoration: underline;
+}
+@mixin logo($font-col: $font-col-2) {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  height: 45px;
+  width: 20%;
+  img {
+    width: 50px;
+    height: 45px;
+    padding-right: 7px;
+  }
+  p {
+    font-family: $font-2;
+    font-size: 1.3rem;
+    font-weight: map-get($font-weight, bold);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 1.1px;
+    color: $font-col;
+    padding: 2px;
+    span {
+      font-size: 0.7rem;
+    }
+  }
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $font-1;
+  background-color: $bg-2;
+  font-size: 16px;
+}
+.header {
+  background: $bg-2 $bg-1 no-repeat center;
+  background-size: cover;
+  border-bottom-right-radius: 50%;
+  height: 900px;
+  width: 100vw;
+  .header-wrap {
+    margin: 0 250px;
+    padding-top: 50px;
+    font-size: 1.5rem;
+    .landing-logo {
+      @include logo;
+    }
+    .header_heading {
+      margin: 70px 0;
+      color: $font-col-2;
+      font-size: 4rem;
+      font-weight: map-get($font-weight, bold);
+      width: 33%;
+      height: 25%;
+      position: relative;
+      &::after {
+        position: absolute;
+        content: "awesome";
+        background-color: $mark;
+        top: 5rem;
+        left: 0;
+      }
+    }
+    .header_text {
+      color: $font-col-1;
+      font-size: 1.25rem;
+      line-height: 1.5;
+      width: 45%;
+      margin-bottom: 70px;
+    }
+    div {
+      margin-top: 90px;
+      display: flex;
+      width: 30%;
+      justify-content: space-between;
+      .header_button {
+        @include button;
+      }
+      .login {
+        @include link;
+      }
+    }
+  }
+}
+.section {
+  background-color: $bg-2;
+  margin: 50px 300px;
+  text-align: center;
+  position: relative;
+  height: 1200px;
+  .section_text {
+    font-size: 3rem;
+    margin: 50px auto;
+    position: relative;
+    color: $font-col-1;
+    &::after {
+      position: absolute;
+      content: "adventure";
+      background-color: $mark;
+      left: 50.8%;
+    }
+  }
+  .section_card_wrap {
+    margin: 0 100px 200px 100px;
+    padding-bottom: 200px;
+    text-align: center;
+    height: 70%;
+    .section_card {
+      background-color: $bg-3;
+      margin: 25px 0;
+      @extend %border;
+      display: flex;
+      padding: 20px;
+      color: $font-col-4;
+      height: 300px;
+      .section_card_img {
+        @extend %border;
+      }
+      .section_card_right_container {
+        margin: 50px 80px;
+        .section_card_heading {
+          font-weight: map-get($font-weight, bold);
+          font-size: 1.5rem;
+          color: $font-col-3;
+          padding: 25px 0;
+        }
+        .section_card_text {
+          @extend .header_text;
+          text-align: justify;
+          padding-bottom: 20px;
+        }
+        .section_link {
+          @include link($font-col-4);
+        }
+      }
+    }
+  }
+  .section_banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    bottom: -8%;
+    background: $gradient;
+    @extend %border;
+    z-index: 10;
+    height: 100px;
+    width: 100%;
+    .section_banner_text_wrap {
+      margin: 20px 120px;
+      text-align: left;
+      .section_banner_heading {
+        font-size: 1.5rem;
+        font-weight: map-get($font-weight, bold);
+        color: $font-col-2;
+        padding-bottom: 1rem;
+        position: relative;
+        &::before {
+          content: "start";
+          background-color: $mark;
+          position: absolute;
+          right: 55%;
+        }
+      }
+      .section_banner_text {
+        color: $font-col-3;
+        font-size: 0.9rem;
+      }
+    }
+    .section_banner_button {
+      margin: 20px 120px;
+      @include button;
+      color: $font-col-3;
+    }
+  }
+}
+.footer {
+  background-color: $bg-3;
+  color: $font-col-4;
+  height: 200px;
+  .footer-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 100px;
+    padding-top: 90px;
+    .footer_logo {
+      @include logo($font-col-4);
+      img {
+        color: $font-col-3;
+      }
+    }
+    .footer_text {
+      width: 20%;
+      font-size: 0.9rem;
+    }
+  }
+}
