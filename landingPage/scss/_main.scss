@@ -1,0 +1,416 @@
+@import "variables";
+@mixin navigation {
+    display: flex;
+    justify-content: space-between;
+    a {
+        text-decoration: none;
+    }
+}
+@mixin form {
+    display: flex;
+    border: 1px solid $font-dark-color;
+    font-size: 1.1rem;
+                input {
+                    cursor: text;
+                    border: none;
+                    width: 80%;
+                    background-color: $background-section;
+                    padding: 20px;
+                }
+                button {
+                    cursor: pointer;
+                    border: none;
+                    width: 20%;
+                    background-color: $button-color;
+                    color: $font-light-color;
+                 }
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+@media only screen and (min-width: 900px) {
+    body {
+        font-family: $font-family;
+        background-color: $background-main;
+    }
+    .header {
+        background: $background-main url("../img/apples.jpg") no-repeat center;
+        background-size: cover;
+        color: $font-light-color;
+        height: 900px;
+        text-align: center;
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 0 40px;
+            padding-top: 40px;
+            .logo {
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+            .nav {
+                @include navigation;
+                width: 30%;
+                a {
+                    color: $font-light-color;
+                }
+            }
+        }
+        &_heading {
+            text-transform: uppercase;
+            padding-top: 280px; 
+            h1 {
+                font-size: 4rem;
+                font-weight: normal;
+                letter-spacing: 0.4rem;
+                span {
+                    font-size: 6rem;
+                }
+            }
+            p {
+                text-transform: capitalize;
+                letter-spacing: 0.1rem;
+            }
+        }
+        .button {
+            padding-top: 250px;
+            button {
+                font-family: inherit;
+                color: $font-light-color;
+                background-color: rgba(52, 54,56, 0.7);
+                border: none;
+                border: 3px solid $font-light-color;
+                padding: 15px 55px;
+            }
+        }
+    }
+    .main {
+        color: $font-dark-color;
+        .about {
+            margin: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 0 100px;
+            article {
+                width: 50%;
+                font-size: 1.5rem;
+                padding-right: 15%;
+            }
+            aside {
+                width: 50%;
+                padding: 0 5%;
+            }
+        }
+    }
+    .shop {
+        background-color: $background-section;
+        padding: 140px 40px 50px;
+        text-align: center;
+        h2 { 
+            font-weight: normal;
+            font-size: 2rem;
+            padding-bottom: 100px;
+        }
+        .block_wrap {
+            .block {
+                display: flex;
+                align-items: center;
+                padding-top: 15px;
+            .picture {
+                position: relative;
+                width: 65%;
+                color: $inner-card-color;
+
+                img {
+                    width: 100%;filter: brightness(75%) saturate(170%);
+                }
+                span {
+                    background-color: rgba(52, 54,56, 0.7);
+                    border: 3px solid $inner-card-color;
+                    position: absolute;
+                    top: 25px;
+                    right: 25px;
+                    padding: 10px 15px;
+                }
+                p {
+                    position: absolute;
+                    bottom: 25px;
+                    left: -90px;
+                }
+            }
+            p {
+                width: 35%;
+                padding-left: 15px;
+            }
+            }
+            .block:nth-child(2n) {
+            flex-direction: row-reverse;
+            }
+        }
+        .form-wrap {
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $font-light-color;
+            padding: 50px 50px;
+            p {
+                font-size: 1.5rem;
+                letter-spacing: 0.05rem;
+                width: 30%;
+            }
+            form {
+                width: 70%;
+                @include form;
+            }
+        }
+    }
+    .footer {
+        padding: 140px 40px 20px;
+        background-color: $font-light-color;
+        .vacancies {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            div {
+                width: 25%;
+                margin: 15px;
+                h4 {
+                    margin: 15px;
+                }
+                p {
+                    color: $font-footer-color;
+                    
+                }
+                span {
+                    color: $span-color;
+                }
+                form {
+                    margin: 0.4rem;
+                    width: 100%;
+                    @include form;
+                }
+            }
+        }
+        .line {
+            padding-top: 50px;
+            width: 100%;
+            border-bottom: 5px solid $line-color;
+            opacity: 0.3;
+
+        }
+        .info {
+            margin-top: 15px;
+            color: $font-footer-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            nav {
+                width: 25%;
+                @include navigation;
+                a {
+                    color: $font-dark-color;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 900px) {
+    body {
+        font-family: $font-family;
+        background-color: $background-main;
+    }
+    .header {
+        width: 100vw;
+        background: $background-main url("../img/apples.jpg") no-repeat center;
+        background-size: cover;
+        color: $font-light-color;
+        height: 300px;
+        text-align: center;
+        .home {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px;
+            padding-top: 10px;
+            .logo {
+                text-transform: uppercase;
+                letter-spacing: 0.2rem;
+            }
+            .nav {
+                @include navigation;
+                flex-direction: column;
+                width: 30%;
+                a {
+                    color: $font-light-color;
+                }
+            }
+        }
+        &_heading {
+            text-transform: uppercase;
+            padding-top: 20px; 
+            h1 {
+                font-size: 2rem;
+                font-weight: normal;
+                letter-spacing: 0.4rem;
+                span {
+                    font-size: 3rem;
+                }
+            }
+            p {
+                text-transform: capitalize;
+                letter-spacing: 0.1rem;
+            }
+        }
+        .button {
+            padding-top: 20px;
+            button {
+                font-family: inherit;
+                color: $font-light-color;
+                background-color: rgba(52, 54,56, 0.7);
+                border: none;
+                border: 3px solid $font-light-color;
+                padding: 15px 55px;
+            }
+        }
+    }
+    .main {
+        color: $font-dark-color;
+        .about {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0 20px;
+            article {
+                margin: 10px auto;
+                width: 100%;
+                font-size: 1.5rem;
+                padding-right: 15%;
+            }
+            aside {
+                width: 100%;
+                padding: 0 5%;
+            }
+        }
+    }
+    .shop {
+        background-color: $background-section;
+        padding: 40px 20px 20px;
+        text-align: center;
+        h2 { 
+            font-weight: normal;
+            font-size: 1.5rem;
+            padding-bottom: 20px;
+        }
+        .block_wrap {
+            .block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                padding-top: 15px;
+            .picture {
+                position: relative;
+                width: 100%;
+                color: $inner-card-color;
+
+                img {
+                    width: 100%;filter: brightness(75%) saturate(170%);
+                }
+                span {
+                    background-color: rgba(52, 54,56, 0.7);
+                    border: 3px solid $inner-card-color;
+                    position: absolute;
+                    top: 10px;
+                    right: 10px;
+                    padding: 10px 15px;
+                }
+                p {
+                    position: absolute;
+                    bottom: 10px;
+                    left: -90px;
+                }
+            }
+            p {
+                width: 100%;
+                padding-left: 15px;
+            }
+            }
+        }
+        .form-wrap {
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: $font-light-color;
+            p {
+                font-size: 1.5rem;
+                letter-spacing: 0.05rem;
+                width: 100%;
+                padding: 15px;
+            }
+            form {
+                width: 100%;
+                margin: 15px;
+                @include form;
+            }
+        }
+    }
+    .footer {
+        padding: 20px;
+        background-color: $font-light-color;
+        .vacancies {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            div {
+                width: 100%;
+                margin: 10px;
+                h4 {
+                    margin: 15px;
+                }
+                p {
+                    color: $font-footer-color;
+                    
+                }
+                span {
+                    color: $span-color;
+                }
+                form {
+                    margin: 15px;
+                    width: 100%;
+                    @include form;
+                }
+            }
+        }
+        .line {
+            padding-top: 50px;
+            width: 100%;
+            border-bottom: 5px solid $line-color;
+            opacity: 0.3;
+
+        }
+        .info {
+            margin-top: 15px;
+            color: $font-footer-color;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            nav {
+                width: 25%;
+                flex-direction: column;
+                @include navigation;
+                a {
+                    color: $font-dark-color;
+                }
+            }
+        }
+    }
+}
