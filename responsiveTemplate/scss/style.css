@@ -1,0 +1,631 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #363636;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3rem;
+  z-index: 100;
+}
+.header .navigation nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .navigation nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #363636;
+}
+.header .navigation a:hover {
+  color: #0078aa;
+}
+
+.main {
+  margin-top: 3rem;
+}
+.main .home {
+  height: 35rem;
+  width: 100%;
+  background: url("/responsiveTemplate/img/lady.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.main .home h1 {
+  padding: 10rem 0 0;
+  font-size: 3rem;
+}
+.main .home p {
+  font-size: 1.2rem;
+  margin: 1.5rem auto;
+}
+.main .home .home-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: flex-start;
+}
+.main .home .home-links .icon {
+  background-color: #0078aa;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.main .home .home-links .icon a {
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+.main .home .home-links .icon:hover {
+  border: 1px solid #0078aa;
+  background: #ffffff;
+}
+.main .home .home-links .icon:hover a {
+  color: #0078aa;
+}
+.main .about {
+  margin: 2rem 0;
+  background: url("/responsiveTemplate/img/tools.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+.main .about h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.main .about p {
+  text-transform: uppercase;
+  color: #0078aa;
+}
+.main .about ul > li {
+  list-style-type: none;
+}
+.main .about ul > li i {
+  color: #0078aa;
+}
+.main .about ul > li h5 {
+  display: inline-block;
+  font-size: 1.2rem;
+  margin-left: 0.3rem;
+}
+.main .about ul > li p {
+  color: #363636;
+  text-transform: none;
+}
+.main .services {
+  background: url("/responsiveTemplate/img/services_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+}
+.main .services h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+.main .services p {
+  text-transform: uppercase;
+}
+.main .services .services-block-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.main .services .services-block-wrap .block {
+  width: 30%;
+  background-color: #ffffff;
+  text-align: left;
+  margin: 1rem;
+  padding: 1.3rem;
+}
+.main .services .services-block-wrap .block .images {
+  height: 7.5rem;
+  position: relative;
+}
+.main .services .services-block-wrap .block .images .img-1 {
+  font-size: 3.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 1rem;
+}
+.main .services .services-block-wrap .block .images .img-2 {
+  color: #0078aa;
+  opacity: 0.1;
+  font-size: 7rem;
+  position: absolute;
+  bottom: 0;
+  left: 0.8rem;
+  padding: 1rem;
+}
+.main .services .services-block-wrap .block h4 {
+  font-size: 1.1rem;
+  padding: 0.7rem 0;
+}
+.main .services .services-block-wrap .block p {
+  text-transform: none;
+}
+.main .pricing {
+  text-align: center;
+  background: url("/responsiveTemplate/img/pricing_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  height: 70rem;
+}
+.main .pricing h2 {
+  font-size: 2.5rem;
+  margin: 1rem 0;
+  padding-top: 2.5rem;
+}
+.main .pricing p {
+  text-transform: uppercase;
+}
+.main .pricing .pricing-offers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  justify-content: center;
+  margin-top: 5rem;
+}
+.main .pricing .pricing-offers .offer {
+  padding: 3rem;
+  background-color: #93dfff;
+  color: #ffffff;
+  height: 40rem;
+  width: 30%;
+}
+.main .pricing .pricing-offers .offer h4 {
+  font-size: 2rem;
+}
+.main .pricing .pricing-offers .offer h3 {
+  font-size: 4rem;
+  margin: 1.5rem;
+}
+.main .pricing .pricing-offers .offer p {
+  text-transform: none;
+  font-size: 1.2rem;
+  margin: 1.5rem;
+}
+.main .pricing .pricing-offers .offer ul li {
+  list-style-type: none;
+  line-height: 2.5rem;
+}
+.main .pricing .pricing-offers .offer button {
+  cursor: pointer;
+  width: 35%;
+  margin: 2.5rem auto;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: #0078aa;
+  background-color: #ffffff;
+  border: 2px solid #0078aa;
+  border-radius: 0.5rem;
+}
+.main .pricing .pricing-offers .offer button:hover {
+  background-color: #0078aa;
+  color: #ffffff;
+}
+.main .pricing .pricing-offers .offer:nth-child(2) {
+  padding-top: 5.5rem;
+  border: 2px solid #0078aa;
+  background-color: #ffffff;
+  color: #0078aa;
+  height: 45rem;
+}
+.main .contact {
+  height: 45rem;
+  background-image: url("/responsiveTemplate/img/contact_image.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+}
+.main .contact h2 {
+  font-size: 2.5rem;
+  margin: 0.5rem 0;
+  padding-top: 2.5rem;
+}
+.main .contact p {
+  text-transform: uppercase;
+}
+.main .contact form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+  background-color: #ffffff;
+}
+.main .contact form input {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  line-height: 2rem;
+  padding: 0 0.6rem;
+}
+.main .contact form input::-moz-placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0.7rem;
+}
+.main .contact form input:-ms-input-placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0.7rem;
+}
+.main .contact form input::placeholder {
+  font-style: italic;
+  font-size: 1rem;
+  padding: 0.7rem;
+}
+.main .contact form input[type=submit] {
+  cursor: pointer;
+  background-color: #0078aa;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  width: 6rem;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+.main .contact form input[type=submit]:hover {
+  border: 1px solid #0078aa;
+  background-color: #ffffff;
+  color: #0078aa;
+}
+.main .short-cut {
+  cursor: pointer;
+  display: inline;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: #0078aa;
+  padding: 15px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+}
+.main .short-cut a {
+  color: #ffffff;
+}
+.main .short-cut:hover {
+  border: 1px solid #0078aa;
+  background: #ffffff;
+}
+.main .short-cut:hover a {
+  color: #0078aa;
+}
+
+.footer {
+  background-color: #363636;
+  height: 3.5rem;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+@media only screen and (min-width: 414px) and (max-width: 767px) {
+  .header {
+    padding: 0.5rem;
+    height: 5.5rem;
+    flex-direction: column;
+    width: 100vw;
+  }
+  .header .navigation a {
+    font-size: 1rem;
+    padding: 0.5rem;
+  }
+
+  .main {
+    margin-top: 1rem;
+  }
+  .main .home {
+    text-align: center;
+    background-position: -20em 0;
+    border-radius: 0;
+  }
+  .main .home h1 {
+    margin: 0 1rem;
+  }
+  .main .home .home-links {
+    justify-content: space-between;
+    margin: 3rem auto;
+  }
+  .main .home .home-links .icon {
+    width: 70px;
+    height: 70px;
+  }
+  .main .home .home-links .icon a {
+    font-size: 2.5rem;
+  }
+  .main .about {
+    margin-top: 6rem;
+    height: 60rem;
+    background-position: 0 0;
+    padding-top: 25rem;
+    text-align: center;
+  }
+  .main .about h2 {
+    margin: 0;
+  }
+  .main .about ul li {
+    padding: 1rem 1.2rem;
+  }
+  .main .about ul li p {
+    padding-top: 1rem;
+  }
+  .main .services {
+    height: 130rem;
+    background-position: 0 0;
+  }
+  .main .services h2 {
+    padding-top: 2.5rem;
+  }
+  .main .services p {
+    padding-bottom: 2rem;
+  }
+  .main .services .services-block-wrap {
+    flex-direction: column;
+  }
+  .main .services .services-block-wrap .block {
+    height: 17rem;
+    width: 80%;
+  }
+  .main .pricing {
+    height: 140rem;
+  }
+  .main .pricing .pricing-offers {
+    flex-direction: column;
+  }
+  .main .pricing .pricing-offers .offer {
+    width: 90%;
+    margin: 2rem;
+  }
+  .main .pricing .pricing-offers .offer button {
+    width: 50%;
+    padding: 0.5rem 0.7rem;
+  }
+  .main .pricing .pricing-offers .offer:nth-child(2) {
+    padding-top: 3rem;
+    height: 40rem;
+  }
+  .main .contact {
+    height: 73rem;
+    background-position: 0 0;
+    background-size: contain;
+    text-align: center;
+    padding-top: 33rem;
+  }
+  .main .contact form {
+    padding: 3rem 2rem;
+    width: 100%;
+  }
+  .main .contact form input {
+    margin: 1.2rem auto;
+  }
+
+  .footer {
+    margin-top: 3rem;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .header {
+    padding: 3rem;
+    width: 100vw;
+  }
+  .header .navigation {
+    padding-right: 0.5rem;
+  }
+  .header .navigation a {
+    margin-left: 1.3rem;
+  }
+
+  .main {
+    margin-top: 3rem;
+  }
+  .main .home {
+    background-position: -15rem 0;
+    padding: 2rem;
+  }
+  .main .home h1 {
+    font-size: 2.5rem;
+    width: 65%;
+  }
+  .main .home .home-links .icon {
+    width: 60px;
+    height: 60px;
+  }
+  .main .home .home-links .icon a {
+    font-size: 2rem;
+  }
+  .main .about {
+    padding: 5rem 2rem 4rem 50%;
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-size: 50%;
+    background-position: 0 7rem;
+  }
+  .main .about h2 {
+    margin-top: -5rem;
+  }
+  .main .about ul > li {
+    margin-top: 2rem;
+  }
+  .main .about ul > li p {
+    margin-top: 0.6rem;
+  }
+  .main .services {
+    height: 56rem;
+  }
+  .main .services h2 {
+    padding-top: 3rem;
+  }
+  .main .services .services-block-wrap {
+    margin-top: 1rem;
+  }
+  .main .services .services-block-wrap .block {
+    height: 20rem;
+    width: 30%;
+    margin: 0.8rem;
+  }
+  .main .pricing {
+    background-size: contain;
+    height: 53rem;
+  }
+  .main .pricing h2 {
+    margin: 0.5rem 0;
+  }
+  .main .pricing .pricing-offers .offer {
+    width: 33%;
+    height: 36rem;
+  }
+  .main .pricing .pricing-offers .offer h4 {
+    font-size: 1.3rem;
+  }
+  .main .pricing .pricing-offers .offer h3 {
+    font-size: 3rem;
+    margin: 0.7rem;
+  }
+  .main .pricing .pricing-offers .offer p {
+    font-size: 0.9rem;
+  }
+  .main .pricing .pricing-offers .offer button {
+    width: 80%;
+    padding: 0.7rem 1rem;
+  }
+  .main .pricing .pricing-offers .offer:nth-child(2) {
+    height: 38rem;
+    padding-top: 3.5rem;
+  }
+  .main .contact {
+    height: 35.5rem;
+    padding: 0 0 0 50%;
+    background-size: contain;
+  }
+  .main .contact h2, .main .contact p {
+    background-color: #ffffff;
+    margin: 0;
+    padding-left: 2rem;
+  }
+  .main .contact form {
+    padding: 3rem 2rem;
+  }
+  .main .contact form input {
+    margin: 0.7rem;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .header {
+    padding: 0 5rem;
+  }
+  .header .navigation a {
+    margin: 1rem;
+  }
+
+  .main {
+    margin-top: 0;
+  }
+  .main .home {
+    padding: 0 5rem;
+  }
+  .main .home h1, .main .home p {
+    width: 60%;
+    margin: 2rem 0;
+  }
+  .main .about {
+    height: 30rem;
+    padding: 0 5rem 0 51%;
+    background-position: 0 0;
+    background-size: 50%;
+  }
+  .main .about ul > li {
+    margin-top: 0.5rem;
+  }
+  .main .about ul > li h5 {
+    margin: 1rem 0;
+  }
+  .main .services {
+    height: 55rem;
+    padding: 2rem 5rem;
+  }
+  .main .services .services-block-wrap .block {
+    height: 20rem;
+  }
+  .main .pricing {
+    height: auto;
+    padding: 0 5rem;
+    background-size: contain;
+  }
+  .main .pricing .pricing-offers {
+    margin-top: 0;
+    padding-top: 3rem;
+  }
+  .main .pricing .pricing-offers .offer {
+    height: 39rem;
+  }
+  .main .pricing .pricing-offers .offer button {
+    width: 45%;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+  .main .pricing .pricing-offers .offer:nth-child(2) {
+    padding-top: 4rem;
+    height: 42rem;
+  }
+  .main .contact {
+    padding: 0 5rem;
+    height: 35.5rem;
+    padding: 3rem 0 0 50%;
+    background-size: contain;
+  }
+  .main .contact h2, .main .contact p {
+    background-color: #ffffff;
+    margin: 0;
+    padding-left: 2rem;
+  }
+  .main .contact form {
+    padding: 3rem 2rem 5rem;
+    position: relative;
+  }
+  .main .contact form input {
+    margin: 0.7rem;
+  }
+  .main .contact form input[type=submit] {
+    position: absolute;
+    bottom: 0;
+    left: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
